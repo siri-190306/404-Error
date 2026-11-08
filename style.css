@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8f3ff, #e9e4ff, #fdf0f7);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.error-container {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    padding: 40px 25px;
+}
+
+.illustration {
+    height: 190px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.planet {
+    width: 125px;
+    height: 125px;
+    background: linear-gradient(145deg, #ffb7d5, #bd9cff);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 35px rgba(173, 125, 219, 0.25);
+    animation: float 3s ease-in-out infinite;
+}
+
+.planet-face {
+    font-size: 55px;
+    color: white;
+    transform: rotate(90deg);
+}
+
+.planet-ring {
+    position: absolute;
+    width: 175px;
+    height: 45px;
+    border: 7px solid #a58ae9;
+    border-radius: 50%;
+    transform: rotate(-20deg);
+}
+
+.star {
+    position: absolute;
+    color: #a78bfa;
+    font-size: 30px;
+}
+
+.star-one {
+    top: 15px;
+    left: 20%;
+}
+
+.star-two {
+    top: 45px;
+    right: 18%;
+    font-size: 40px;
+}
+
+.star-three {
+    bottom: 10px;
+    right: 25%;
+}
+
+.cloud {
+    position: absolute;
+    width: 55px;
+    height: 20px;
+    background: white;
+    border-radius: 30px;
+    opacity: 0.8;
+}
+
+.cloud-one {
+    left: 12%;
+    bottom: 25px;
+}
+
+.cloud-two {
+    right: 10%;
+    top: 15px;
+    transform: scale(0.7);
+}
+
+.error-code {
+    font-size: clamp(85px, 18vw, 145px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: 8px;
+    background: linear-gradient(90deg, #a78bfa, #f29ac2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 15px;
+}
+
+h1 {
+    color: #30264f;
+    font-size: clamp(23px, 5vw, 32px);
+    margin: 12px 0;
+    font-weight: 700;
+}
+
+.message {
+    max-width: 470px;
+    margin: 0 auto;
+    color: #77718a;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.home-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+    padding: 14px 28px;
+    background: linear-gradient(90deg, #a78bfa, #e79bc5);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(167, 139, 250, 0.3);
+    transition: 0.3s ease;
+}
+
+.home-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(167, 139, 250, 0.4);
+}
+
+.home-button span {
+    font-size: 20px;
+}
+
+.footer-text {
+    color: #a29ab5;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@media (max-width: 480px) {
+    .error-container {
+        padding: 25px 12px;
+    }
+
+    .illustration {
+        height: 160px;
+    }
+
+    .planet {
+        width: 105px;
+        height: 105px;
+    }
+
+    .planet-ring {
+        width: 145px;
+        height: 38px;
+    }
+
+    .message {
+        font-size: 14px;
+    }
+}
